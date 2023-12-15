@@ -1,0 +1,55 @@
+import { Model } from 'sequelize-typescript';
+import { Team } from 'src/team/team.model';
+interface FinancesCreationAttrs {
+    gameId: number;
+    teamId: number;
+    round: number;
+    fixed_assets: number;
+    accumulated_depreciation: number;
+    cash: number;
+    inventories: number;
+    contributed_capital: number;
+    retained_profit: number;
+    long_term_debt: number;
+    growth_finances: number;
+    sales: number;
+    less_promo: number;
+    other_incomes: number;
+    CoGs: number;
+    ga_expenses: number;
+    ms_expenses: number;
+    rd_expenses: number;
+    depreciation: number;
+    interests: number;
+    investments: number;
+    borrowings: number;
+    assum_writte_off: number;
+}
+export declare class Finances extends Model<Finances, FinancesCreationAttrs> {
+    id: number;
+    gameId: number;
+    teamId: number;
+    round: number;
+    fixed_assets: number;
+    accumulated_depreciation: number;
+    cash: number;
+    inventories: number;
+    contributed_capital: number;
+    retained_profit: number;
+    long_term_debt: number;
+    growth_finances: number;
+    sales: number;
+    less_promo: number;
+    other_incomes: number;
+    CoGs: number;
+    ga_expenses: number;
+    ms_expenses: number;
+    rd_expenses: number;
+    depreciation: number;
+    interests: number;
+    investments: number;
+    borrowings: number;
+    accum_write_off: number;
+    team: Team;
+}
+export {};

@@ -1,0 +1,15 @@
+import { Channel } from 'src/channel/channel.model';
+import { Spot } from 'src/spot/spot.model';
+import { Product } from 'src/product/product.model';
+import { MarketSegment } from 'src/market-segment/market-segment.model';
+import { AdvancedFeature } from 'src/advanced-features/advanced-features.model';
+import { Chain } from 'src/chain/chain.model';
+export declare function BrandCoverage(trademarkId: number, channels: Channel[]): number;
+export declare function PromoRate(spot: Spot): number;
+export declare function PriceRate(segment: MarketSegment, models: Product[]): number;
+export declare function TypeRate(segment: MarketSegment, models: Product[]): number;
+export declare function AFRate(af_seg: AdvancedFeature, models: Product[]): number;
+export declare function SpotRate(spot: Spot, segment: MarketSegment): number;
+export declare function MatchByPrice(chain: Chain, products: Product[]): number;
+export declare function MatchByDesign(chain: Chain, products: Product[]): number;
+export declare function MatchByMargin(chain: Chain, products: Product[]): number;
